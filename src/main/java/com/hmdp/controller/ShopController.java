@@ -33,9 +33,7 @@ public class ShopController {
      */
     @GetMapping("/{id}")
     public Result queryShopById(@PathVariable("id") Long id) {
-        Shop shop = shopService.queryWithLogicalExpire(id);
-
-        return Result.ok(shop);
+        return shopService.queryById(id);
     }
 
     /**

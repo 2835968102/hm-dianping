@@ -19,10 +19,4 @@ public interface IShopService extends IService<Shop> {
     Result updateByShop(Shop shop);
 
     void saveShop2Redis(Long id, Long expireSeconds);
-
-    Shop queryWithLogicalExpire(Long id);
-
-    boolean tryLock(String key);
-
-    void unlock(String key);
 }
