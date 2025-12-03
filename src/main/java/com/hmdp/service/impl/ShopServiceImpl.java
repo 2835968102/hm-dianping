@@ -39,9 +39,9 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IS
 
     private final CacheClient cacheClient;
 
-    public ShopServiceImpl(StringRedisTemplate stringRedisTemplate, CacheClient cacheClient, CacheClient cacheClient1) {
+    public ShopServiceImpl(StringRedisTemplate stringRedisTemplate, CacheClient cacheClient) {
         this.stringRedisTemplate = stringRedisTemplate;
-        this.cacheClient = cacheClient1;
+        this.cacheClient = cacheClient;
     }
 
     @Override
